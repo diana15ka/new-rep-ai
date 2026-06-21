@@ -1,14 +1,14 @@
 import { router } from "expo-router";
 import { useState } from "react";
 import {
-    KeyboardAvoidingView,
-    Platform,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 type ChatMessage = {
@@ -45,7 +45,7 @@ export default function ChatScreen() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/yoga-chat", {
+      const response = await fetch("http://new-rep-ai.onrender.com/api/yoga-chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
