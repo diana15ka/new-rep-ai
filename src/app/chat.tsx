@@ -45,7 +45,7 @@ export default function ChatScreen() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://new-rep-ai.onrender.com/api/yoga-chat", {
+      const response = await fetch("https://new-rep-ai.onrender.com/api/yoga-chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

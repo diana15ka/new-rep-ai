@@ -152,7 +152,7 @@ export default function HomeScreen() {
     setPlan(null);
 
     try {
-      const response = await fetch("http://new-rep-ai.onrender.com/api/generate-yoga-plan", {
+      const response = await fetch("https://new-rep-ai.onrender.com/api/generate-yoga-plan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ goal, level, duration }),
