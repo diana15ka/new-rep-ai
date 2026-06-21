@@ -15,7 +15,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#F5F3EE"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.dianaleaderlogin.yogadailyai"
     },
     "web": {
       "output": "static",
@@ -35,6 +36,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "eaee9a5d-46e4-48dd-b889-0545259af142"
+      }
     }
   }
 }
