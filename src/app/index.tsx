@@ -2,6 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router, useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import MoodSelector from "../components/MoodSelector";
 
 export default function HomeScreen() {
   const [isPremium, setIsPremium] = useState(false);
@@ -124,19 +125,7 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      <View style={styles.recommendationCard}>
-        <Text style={styles.cardLabel}>Today’s Recommendation</Text>
-        <Text style={styles.recommendationTitle}>10 min Relaxation</Text>
-        <Text style={styles.recommendationText}>
-          A short calming session to reset your body and mind.
-        </Text>
-
-        <TouchableOpacity style={styles.primaryButton} onPress={openGenerate}>
-          <Text style={styles.primaryButtonText}>
-            {isPremium ? "Start Today’s Session" : "Unlock Premium"}
-          </Text>
-        </TouchableOpacity>
-      </View>
+      <MoodSelector />
 
       <View style={styles.statsRow}>
         <TouchableOpacity style={styles.statCard} onPress={() => navigate("/progress")}>
@@ -243,40 +232,6 @@ const styles = StyleSheet.create({
     color: "#2E4A3F",
     fontWeight: "900",
     fontSize: 13,
-  },
-  recommendationCard: {
-    backgroundColor: "#FFFFFF",
-    borderRadius: 26,
-    padding: 22,
-    marginBottom: 16,
-  },
-  cardLabel: {
-    color: "#777",
-    fontWeight: "800",
-    marginBottom: 8,
-  },
-  recommendationTitle: {
-    fontSize: 25,
-    fontWeight: "900",
-    color: "#2E4A3F",
-  },
-  recommendationText: {
-    color: "#555",
-    fontSize: 15,
-    lineHeight: 22,
-    marginTop: 8,
-  },
-  primaryButton: {
-    backgroundColor: "#2E4A3F",
-    padding: 16,
-    borderRadius: 18,
-    alignItems: "center",
-    marginTop: 18,
-  },
-  primaryButtonText: {
-    color: "#FFFFFF",
-    fontSize: 17,
-    fontWeight: "900",
   },
   statsRow: {
     flexDirection: "row",
